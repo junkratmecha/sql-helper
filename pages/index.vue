@@ -1,18 +1,17 @@
+
 <template>
-  <div>
+  <div class="bg-green-100 h-screen">
     <nav-bar />
-    <!-- <Tutorial /> -->
-    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
-      <div class="flex-shrink-0">
-        <img class="h-12 w-12" src="/img/logo.svg" alt="ChitChat Logo">
-      </div>
-      <div>
-        <div class="text-xl font-medium text-black">ChitChat</div>
-        <p class="text-gray-500">You have a new message!</p>
+
+    <div class="grid col-span-4 relative text-center flex justify-center">
+      <div class="my-10 block p-6 rounded-lg shadow-lg bg-white max-w-sm text-center">
+        <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">
+          SQLヘルパー
+        </h5>
       </div>
     </div>
-  </div>
 
+  </div>
 </template>
 
 <script>
