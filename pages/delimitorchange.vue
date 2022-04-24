@@ -4,15 +4,17 @@
 
     <div class="flex flex-wrap flex-row">
       <div class="my-10 w-5/12 text-center justify-center">
-        <kugiri-words/>
+        <kugiri-words @toParent="inputBefore" />
       </div>
       <div class="my-10 block p-6 rounded-lg shadow-lg bg-white max-w-sm text-center">
         <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">
           Dilimitors - Changer
         </h5>
+        <p>{{ beforeInputChild }}</p>
+        <p>{{ afterInputChild }}</p>
       </div>
       <div class="my-10 w-5/12 text-center justify-center">
-        <kugiri-words/>
+        <kugiri-words @toParent="inputAfter" />
       </div>
     </div>
     <div class="flex flex-wrap flex-row">
@@ -96,18 +98,32 @@
 export default {
   name: 'DelimitorChange',
   data () {
-    return { org: '', changed: '' }
+    return {
+      org: '',
+      changed: '',
+      beforeInputChild: '改行',
+      afterInputChild: '改行'
+    }
   },
   methods: {
     stringTransformed () {
       let logic = ''
+      let orgArray = []
       if (this.org !== '') {
-        const orgArray = this.org.split(/\n/)
-        orgArray.forEach(function (oa) {
-          logic += '"' + oa + '", '
-        })
-        logic = logic.slice(0, -2)
-        logic = '(' + logic + ')'
+        if (this.beforeInputChild === '改行') {
+          orgArray = this.org.split(/\r\n|\n/)
+        } else if (this.beforeInputChild === 'Tab') {
+          orgArray = this.org.split(/\s/)
+        } else {
+          orgArray = this.org.split(this.beforeInputChild)
+        }
+        if (this.afterInputChild === '改行') {
+          logic = orgArray.join('\n')
+        } else if (this.afterInputChild === 'Tab') {
+          logic = orgArray.join('\t')
+        } else {
+          logic = orgArray.join(this.afterInputChild)
+        }
       }
       this.changed = logic
     },
@@ -122,6 +138,12 @@ export default {
     },
     copyToClipboardChanged () {
       navigator.clipboard.writeText(this.changed)
+    },
+    inputBefore (input) {
+      this.beforeInputChild = input
+    },
+    inputAfter (input) {
+      this.afterInputChild = input
     }
   }
 }

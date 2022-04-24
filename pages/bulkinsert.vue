@@ -5,8 +5,38 @@
     <div class="grid col-span-4 relative text-center flex justify-center">
       <div class="my-10 block p-6 rounded-lg shadow-lg bg-white max-w-sm text-center">
         <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">
-          Insert Ignore Into
+          Bulk Insert
         </h5>
+        <select
+          v-model="selectSql"
+          class="form-select appearance-none
+            block
+            w-full
+            px-3
+            py-1.5
+            text-base
+            font-normal
+            text-gray-700
+            bg-white bg-clip-padding bg-no-repeat
+            border border-solid border-gray-300
+            rounded
+            transition
+            ease-in-out
+            m-0
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+        >
+          <option
+            value="Insert Ignore Into テーブル名"
+            selected
+          >
+            Insert Ignore Into
+          </option>
+          <option
+            value="Replace Into テーブル名"
+          >
+            Replace Into
+          </option>
+        </select>
       </div>
     </div>
 
@@ -93,11 +123,11 @@ Insert Ignore Into テーブル名
 export default {
   name: 'BulkInsert',
   data () {
-    return { org: '', changed: '' }
+    return { org: '', changed: '', selectSql: 'Insert Ignore Into テーブル名' }
   },
   methods: {
     stringTransformed () {
-      let logic = 'Insert Ignore Into テーブル名' + '\n'
+      let logic = this.selectSql + '\n'
       if (this.org !== '') {
         const orgArray = this.org.split(/\n/)
         orgArray.forEach(function (oa) {
