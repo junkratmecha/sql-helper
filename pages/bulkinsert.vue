@@ -45,7 +45,9 @@
         <div class="justify-center flex">
           <div class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-emerald-500 w-10/12">
             <div class="flex justify-between">
-              <span class="self-center font-semibold whitespace-nowrap dark:text-white">Before</span>
+              <span class="self-center font-semibold whitespace-nowrap dark:text-white">
+                Before
+              </span>
               <div>
                 <button class="bg-white hover:bg-slate-200 font-bold text-sm py-1 px-2 border-b-4 border-slate-200 hover:border-slate-400 rounded" @click="copyToClipboardOrg()">
                   Copy
@@ -70,6 +72,15 @@ user_id,user_name,user_age
 200, メアリー, 20"
           >
           </textarea>
+        </div>
+        <div class="flex justify-center">
+          文字数:{{ org.length }} 行数:
+          <div v-if="org !== ''">
+            {{ ( org.match( /\n/g ) || [] ).length + 1 }}
+          </div>
+          <div v-else>
+            0
+          </div>
         </div>
       </div>
 
@@ -113,6 +124,15 @@ Insert Ignore Into テーブル名
 "
           >
           </textarea>
+        </div>
+        <div class="flex justify-center">
+          文字数:{{ changed.length }} 行数:
+          <div v-if="changed !== ''">
+            {{ ( changed.match( /\n/g ) || [] ).length + 1 }}
+          </div>
+          <div v-else>
+            0
+          </div>
         </div>
       </div>
     </div>

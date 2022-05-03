@@ -46,6 +46,15 @@
           >
           </textarea>
         </div>
+        <div class="flex justify-center">
+          文字数:{{ org.length }} 行数:
+          <div v-if="org !== ''">
+            {{ ( org.match( /\n/g ) || [] ).length + 1 }}
+          </div>
+          <div v-else>
+            0
+          </div>
+        </div>
       </div>
 
       <div class="w-2/12 text-center">
@@ -88,6 +97,15 @@
 お"
           >
           </textarea>
+        </div>
+        <div class="flex justify-center">
+          文字数:{{ changed.length }} 行数:
+          <div v-if="changed !== ''">
+            {{ ( changed.match( /\n/g ) || [] ).length + 1 }}
+          </div>
+          <div v-else>
+            0
+          </div>
         </div>
       </div>
     </div>

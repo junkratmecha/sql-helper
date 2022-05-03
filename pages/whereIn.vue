@@ -43,6 +43,15 @@
           >
           </textarea>
         </div>
+        <div class="flex justify-center">
+          文字数:{{ org.length }} 行数:
+          <div v-if="org !== ''">
+            {{ ( org.match( /\n/g ) || [] ).length + 1 }}
+          </div>
+          <div v-else>
+            0
+          </div>
+        </div>
       </div>
 
       <div class="w-2/12 text-center">
@@ -81,6 +90,15 @@
 IN ('1', '2', '3', '4', '5')"
           >
           </textarea>
+        </div>
+        <div class="flex justify-center">
+          文字数:{{ changed.length }} 行数:
+          <div v-if="changed !== ''">
+            {{ ( changed.match( /\n/g ) || [] ).length + 1 }}
+          </div>
+          <div v-else>
+            0
+          </div>
         </div>
       </div>
     </div>
