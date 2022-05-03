@@ -10,8 +10,6 @@
         <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">
           Dilimitors - Changer
         </h5>
-        <p>{{ beforeInputChild }}</p>
-        <p>{{ afterInputChild }}</p>
       </div>
       <div class="my-10 w-5/12 text-center justify-center">
         <kugiri-words @toParent="inputAfter" />
