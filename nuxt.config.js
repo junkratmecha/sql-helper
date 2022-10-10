@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'sql-helper',
+    title: 'sqlヘルパー',
     htmlAttrs: {
       lang: 'en'
     },
