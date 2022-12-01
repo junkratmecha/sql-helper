@@ -47,5 +47,12 @@ export default {
         autoprefixer: {},
       },
     },
-  }
+  },
+  router: {
+    base: '/sql-helper/'
+  },
+
+  generate: {
+    dir: 'docs'
+  },
 }
