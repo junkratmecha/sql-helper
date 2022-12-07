@@ -49,7 +49,7 @@ export default {
     },
   },
   router: {
-    base: '/sql-helper/'
+    base: '/'
   },
 
   generate: {

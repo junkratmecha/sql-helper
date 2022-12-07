@@ -13,8 +13,8 @@
 
 https://docs.google.com/forms/d/1XW_PTXWqHCwuVQm0Yo9pYXd9teUlNVkZl9Uz2LiWAnA/edit
 
-# build
+# コマンド
 
-npm install
-npm run dev
-npm run generate
+- npm install
+- npm run dev
+- npm run generate
