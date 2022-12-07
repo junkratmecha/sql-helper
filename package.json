@@ -14,7 +14,6 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "@nuxtjs/google-adsense": "^2.1.0",
     "@vue/cli-service": "^4.5.19",
     "core-js": "^3.25.5",
     "nuxt": "^2.15.8",
@@ -27,6 +26,7 @@
     "@babel/eslint-parser": "^7.19.1",
     "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "^5.3.5",
     "@vue/cli-plugin-unit-jest": "^4.5.19",
     "@vue/test-utils": "^1.0.3",
