@@ -36,23 +36,13 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxtjs/google-analytics',
-    '@nuxtjs/google-adsense',
-    {
-      id: "ca-pub-XXXXXXXXXXX",
-      pageLevelAds: false, // 自動広告を表示させる場合
-      analyticsUacct: "UA-XXXXXXXX-X", // Google Analyticsとの連携
-      analyticsDomainName: "example.com", // Google Analyticsとの連携
-    },
-  ],
 
   modules: [
     [
       "@nuxtjs/google-adsense",
       {
         id: "ca-pub-1273257045654054",
-        pageLevelAds: false, // 自動広告を表示させる場合
+        pageLevelAds: true, // 自動広告を表示させる場合
         analyticsUacct: "G-0EGLNQ291C", // Google Analyticsとの連携
         analyticsDomainName: "sql-helper.net", // Google Analyticsとの連携
       },
