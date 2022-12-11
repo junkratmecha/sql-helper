@@ -3,7 +3,7 @@
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-emerald-500">
       <div class="container flex flex-wrap justify-between items-center mx-auto">
         <nuxt-link to="/" class="flex items-center">
-          <img src="/sql-helper/sql-helper.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo"></img>
+          <img src="/ql-helper.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo"></img>
           <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">SQL ヘルパー</span>
         </nuxt-link>
         <div id="mobile-menu" class="hidden w-full md:block md:w-auto">
