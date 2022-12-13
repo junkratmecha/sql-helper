@@ -56,7 +56,7 @@ export default {
         tailwindcss: {},
         autoprefixer: {},
       },
-    },
+    }
   },
   router: {
     base: '/'
