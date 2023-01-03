@@ -18,4 +18,10 @@ https://docs.google.com/forms/d/1XW_PTXWqHCwuVQm0Yo9pYXd9teUlNVkZl9Uz2LiWAnA/edi
 - npm install
 - npm run dev
 - npm run generate
-- npm install -g npm-check-updates
+
+# npm リセット
+
+- rm -rf node_modules
+- rm package-lock.json
+- npm cache clear --force
+- npm install

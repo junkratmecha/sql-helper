@@ -8,7 +8,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'SQL業務をサポートします' },
+      { hid: 'keywords', name: 'keywords', content: 'SQL,自動化,ヘルパー' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -33,8 +34,11 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxt/postcss8',
+    '@nuxtjs/google-analytics'
   ],
-
+  googleAnalytics: {
+    id: 'G-0EGLNQ291C'
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
 
   modules: [
@@ -43,8 +47,6 @@ export default {
       {
         id: "ca-pub-1273257045654054",
         pageLevelAds: true, // 自動広告を表示させる場合
-        analyticsUacct: "G-0EGLNQ291C", // Google Analyticsとの連携
-        analyticsDomainName: "sql-helper.net", // Google Analyticsとの連携
       },
     ],
   ],
